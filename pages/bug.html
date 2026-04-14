@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Bug - BugOut</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="submitbug-page">
+  <div class="submitbug-grid">
+
+    <!-- Logo -->
+    <a href="user.html" class="submitbug-card submitbug-logo-card">
+      <img src="../assets/logo.png" alt="BugOut Logo" />
+    </a>
+
+    <!-- Title -->
+    <div class="submitbug-card submitbug-title-card">
+      <h2>
+        <span class="green-text">Submit</span>
+        <span class="purple-text">Bug</span>
+      </h2>
+    </div>
+
+    <!-- Back -->
+    <a href="user.html" class="submitbug-card submitbug-back-card">
+      <h2>
+        <span class="green-text">Help</span> /
+        <span class="purple-text">Back</span>
+      </h2>
+    </a>
+
+    <!-- Left Card -->
+    <div class="submitbug-card submitbug-detail-card">
+      <h2>
+        <span class="purple-text">Bug</span>
+        <span class="green-text">Details</span>
+      </h2>
+      <img src="../assets/logo.png" alt="Bug Icon" />
+    </div>
+
+    <!-- Form -->
+    <div class="submitbug-card submitbug-form-card">
+      <form id="bugForm" action="../api/create_bug.php" method="POST">
+
+        <!-- Title -->
+        <div class="title-row">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+
+        <!-- Description -->
+        <div class="description-row">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+
+        <!-- Bottom -->
+        <div class="bottom-form-row">
+
+          <!-- Severity -->
+          <div class="priority-row">
+            <label for="severity">Severity:</label>
+            <select id="severity" name="severity" required>
+              <option value="">Select</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+              <option value="Critical">Critical</option>
+            </select>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-bug-btn">Submit</button>
+
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
