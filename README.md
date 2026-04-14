@@ -20,7 +20,3 @@ php -S localhost:8000
 ```
 
 Then open `http://localhost:8000` in your browser.
-
-## Deployment note
-
-**GitHub Pages cannot run PHP**, so sign-in and other `api/*.php` endpoints will not work on GitHub Pages. If you want this hosted publicly, we can deploy the PHP app to a PHP-capable host (and optionally keep the static frontend on GitHub Pages).
